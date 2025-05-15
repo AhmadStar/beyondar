@@ -1,0 +1,11 @@
+{
+    "id": "vendor/clients",
+    "name": "Clients",
+    "namespace": "Botble\\Clients\\",
+    "provider": "Botble\\Clients\\Providers\\ClientsServiceProvider",
+    "author": "Abdulhamid",
+    "url": "",
+    "version": "1.0.0",
+    "description": "",
+    "minimum_core_version": "7.3.8"
+}

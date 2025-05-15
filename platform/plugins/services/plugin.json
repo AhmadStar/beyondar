@@ -1,0 +1,11 @@
+{
+    "id": "vendor/services",
+    "name": "Services",
+    "namespace": "Botble\\Services\\",
+    "provider": "Botble\\Services\\Providers\\ServicesServiceProvider",
+    "author": "Abdulhamid",
+    "url": "",
+    "version": "1.0.0",
+    "description": "beyond Services",
+    "minimum_core_version": "7.3.8"
+}

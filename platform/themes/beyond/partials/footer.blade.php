@@ -1,0 +1,129 @@
+</main>
+
+<footer>
+
+    <!-- footer area start -->
+    <div class="tp-footer-3-area dark-bg pt-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-60">
+                    <div class="tp-footer-3-widget-wrapper footer-col-3-1">
+                        <div class="tp-footer-3-widget mb-40">
+                            <h4 class="tp-footer-3-title">Website map</h4>
+                            <div class="tp-footer-3-menu">
+                                {!!
+                           Menu::renderMenuLocation('footer-menu', [
+                               'options' => ['class' => ' menu sub-menu--slideLeft'],
+                               'view'    => 'main-menu-new',
+                           ])
+                       !!}
+                            </div>
+                        </div>
+                        <div class="tp-footer-3-widget">
+                            <h4 class="tp-footer-3-title">Newsletter</h4>
+                            <div class="tp-footer-3-input-box d-flex align-items-center">
+                                <input type="text" placeholder="Enter Address...">
+                                <button class="tp-footer-3-btn p-relative">
+                                    <span class="icon-1">
+                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                           <path
+                                                   d="M15.7767 7.42864C15.9198 7.58033 16 7.78521 16 7.99872C16 8.21223 15.9198 8.41711 15.7767 8.56882L8.92138 15.77C8.77516 15.9169 8.58094 15.9992 8.37867 16C8.27759 15.9995 8.17746 15.9793 8.08351 15.9399C7.94489 15.8789 7.8266 15.7759 7.74358 15.6441C7.66056 15.5124 7.61651 15.3579 7.61698 15.1999V8.79885H0.761697C0.559684 8.79885 0.365942 8.71456 0.223096 8.5645C0.0802502 8.41444 0 8.21094 0 7.99872C0 7.78652 0.0802502 7.583 0.223096 7.43295C0.365942 7.28289 0.559684 7.1986 0.761697 7.1986H7.61698V0.797552C7.61651 0.639587 7.66056 0.485009 7.74358 0.3533C7.8266 0.22159 7.94489 0.118642 8.08351 0.0574314C8.2242 -0.000213911 8.37756 -0.0148385 8.52585 0.0152518C8.67412 0.0453405 8.81125 0.118914 8.92138 0.22746L15.7767 7.42864Z"
+                                                   fill="#19191A"/>
+                                       </svg>
+                                    </span>
+                                    <span class="icon-2">
+                                       <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                           <path
+                                                   d="M25.1322 1.5092C26.6141 -0.304124 29.3859 -0.304124 30.8678 1.5092C31.9895 2.88181 33.9265 3.26711 35.4881 2.42825C37.5511 1.32004 40.1119 2.38076 40.7871 4.62313C41.2981 6.32052 42.9403 7.41778 44.704 7.24036C47.0341 7.00599 48.994 8.96594 48.7596 11.296C48.5822 13.0597 49.6795 14.7019 51.3769 15.2129C53.6192 15.8881 54.68 18.4489 53.5718 20.5119C52.7329 22.0735 53.1182 24.0105 54.4908 25.1322C56.3041 26.6141 56.3041 29.3859 54.4908 30.8678C53.1182 31.9895 52.7329 33.9265 53.5718 35.4881C54.68 37.5511 53.6192 40.1119 51.3769 40.7871C49.6795 41.2981 48.5822 42.9403 48.7596 44.704C48.994 47.0341 47.0341 48.994 44.704 48.7596C42.9403 48.5822 41.2981 49.6795 40.7871 51.3769C40.1119 53.6192 37.5511 54.68 35.4881 53.5718C33.9265 52.7329 31.9895 53.1182 30.8678 54.4908C29.3859 56.3041 26.6141 56.3041 25.1322 54.4908C24.0105 53.1182 22.0735 52.7329 20.5119 53.5718C18.4489 54.68 15.8881 53.6192 15.2129 51.3769C14.7019 49.6795 13.0597 48.5822 11.296 48.7596C8.96594 48.994 7.00599 47.0341 7.24036 44.704C7.41778 42.9403 6.32052 41.2981 4.62313 40.7871C2.38076 40.1119 1.32004 37.5511 2.42825 35.4881C3.26711 33.9265 2.88181 31.9895 1.5092 30.8678C-0.304124 29.3859 -0.304124 26.6141 1.5092 25.1322C2.88181 24.0105 3.26711 22.0735 2.42825 20.5119C1.32004 18.4489 2.38076 15.8881 4.62313 15.2129C6.32052 14.7019 7.41778 13.0597 7.24036 11.296C7.00599 8.96593 8.96593 7.00599 11.296 7.24036C13.0597 7.41778 14.7019 6.32052 15.2129 4.62313C15.8881 2.38076 18.4489 1.32004 20.5119 2.42825C22.0735 3.26711 24.0105 2.88181 25.1322 1.5092Z"
+                                                   fill="white"/>
+                                           <path
+                                                   d="M25.5194 1.82559C26.8012 0.257078 29.1988 0.257078 30.4806 1.82559C31.7537 3.38351 33.9523 3.82084 35.7247 2.86872C37.5092 1.91013 39.7243 2.82764 40.3083 4.76728C40.8883 6.69382 42.7522 7.93922 44.7541 7.73785C46.7695 7.53512 48.4649 9.23046 48.2621 11.2459C48.0608 13.2478 49.3062 15.1117 51.2327 15.6917C53.1724 16.2757 54.0899 18.4908 53.1313 20.2753C52.1792 22.0477 52.6165 24.2463 54.1744 25.5194C55.7429 26.8012 55.7429 29.1988 54.1744 30.4806C52.6165 31.7537 52.1792 33.9523 53.1313 35.7247C54.0899 37.5092 53.1724 39.7243 51.2327 40.3083C49.3062 40.8883 48.0608 42.7522 48.2621 44.7541C48.4649 46.7695 46.7695 48.4649 44.7541 48.2621C42.7522 48.0608 40.8883 49.3062 40.3083 51.2327C39.7243 53.1724 37.5092 54.0899 35.7247 53.1313C33.9523 52.1792 31.7537 52.6165 30.4806 54.1744C29.1988 55.7429 26.8012 55.7429 25.5194 54.1744C24.2463 52.6165 22.0477 52.1792 20.2753 53.1313C18.4908 54.0899 16.2757 53.1724 15.6917 51.2327C15.1117 49.3062 13.2478 48.0608 11.2459 48.2621C9.23046 48.4649 7.53512 46.7695 7.73785 44.7541C7.93922 42.7522 6.69382 40.8883 4.76728 40.3083C2.82764 39.7243 1.91013 37.5092 2.86872 35.7247C3.82084 33.9523 3.38351 31.7537 1.82559 30.4806C0.257078 29.1988 0.257078 26.8012 1.82559 25.5194C3.38351 24.2463 3.82084 22.0477 2.86872 20.2753C1.91013 18.4908 2.82764 16.2757 4.76728 15.6917C6.69382 15.1117 7.93922 13.2478 7.73785 11.2459C7.53512 9.23046 9.23046 7.53512 11.2459 7.73785C13.2478 7.93922 15.1117 6.69382 15.6917 4.76728C16.2757 2.82764 18.4908 1.91013 20.2753 2.86872C22.0477 3.82084 24.2463 3.38351 25.5194 1.82559Z"
+                                                   stroke="white" stroke-opacity="0.12"/>
+                                       </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-60">
+                    <div class="tp-footer-3-widget text-md-center footer-col-3-2">
+                        <div class="tp-footer-3-logo-box">
+                            <div class="mb-100">
+                                {!! theme_option('site_description') !!}
+                            </div>
+                            <a class="tp-footer-3-logo p-relative" href="/">
+                               <img src="/storage/general/2.png">
+
+                            </a>
+                            <p class="tp-footer-3-copyright">
+                                {!! Theme::getSiteCopyright() !!}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-60">
+                    <div class="tp-footer-3-widget-wrapper footer-col-3-3">
+                        <div class="tp-footer-3-widget mb-30">
+                            <h4 class="tp-footer-3-title">Contact</h4>
+                            <div class="tp-footer-2-contact-item">
+                                 <span><a href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
+                                          target="_blank">{{theme_option('address')}}</a></span>
+                            </div>
+                            <div class="tp-footer-2-contact-item">
+                                <span> <a href="tel:+90 552 455 15 51">+90 552 455 15 51</a></span>
+                                <span> <a href="mailto:{{theme_option('contact_email')}}">{{theme_option('contact_email')}}</a></span>
+                            </div>
+                        </div>
+                        <div class="tp-footer-3-widget">
+                            <h4 class="tp-footer-3-title">Follow</h4>
+                            <div class="tp-footer-3-social">
+                                @if ($socialLinks = Theme::getSocialLinks())
+                                    @foreach($socialLinks as $socialLink)
+                                        {{--{!! dd($socialLink) !!}--}}
+                                        {{--@continue(! $icon = $socialLink->getIconHtml())--}}
+                                        <a {{ $socialLink->getAttributes() }}><i class="fa-brands fa-{{$socialLink->getName()}}"></i></a>
+                                    @endforeach
+                                @endif
+                                {{--<a href="#"><i class="fa-brands fa-twitter"></i></a>--}}
+                                {{--<a href="#"><i class="fa-brands fa-facebook-f"></i></a>--}}
+                                {{--<a href="#"><i class="fa-brands fa-instagram"></i></a>--}}
+                                {{--<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>--}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tp-copyright-2-area tp-copyright-2-bdr-top dark-bg">
+        <div class="container container-1480">
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-5">
+                    <div class="tp-copyright-2-left text-center text-lg-start">
+                        <p>All rights reserved — 2024 © Beyond Creative</p>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    {{--<div class="tp-copyright-2-social text-center text-lg-end">--}}
+                        {{--<a class="mb-10" href="#">Linkedin</a>--}}
+                        {{--<a class="mb-10" href="#">Twitter</a>--}}
+                        {{--<a class="mb-10" href="#">Instagram</a>--}}
+                    {{--</div>--}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer area end -->
+
+</footer>
+</div>
+</div>
+
+
+{!! Theme::footer() !!}
+
+</body>
+</html>

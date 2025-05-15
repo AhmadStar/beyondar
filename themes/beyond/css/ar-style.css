@@ -1,0 +1,76 @@
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem auto -1rem -1rem;
+}
+
+
+@font-face {
+    font-family: "sankari";
+    src: local("sankari"),
+         url(../fonts/sankari.woff2) format("woff2"),
+         url(../fonts/sankari.woff) format("woff"),
+         url(../fonts/sankari.ttf) format("truetype");
+    font-display: swap;
+}
+
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'sankari' !important;
+}
+
+
+.mr-20 {
+    margin-right: unset;
+    margin-left: 20px;
+}
+
+.footer-col-3-1 {
+    padding-left: 53px;
+    padding-right: unset;
+}
+
+
+.footer-col-3-2 {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: unset;
+}
+
+.footer-col-3-3 {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: unset;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .footer-col-3-2 {
+        padding-right: 30px;
+        padding-left: unset;
+    }
+
+    .footer-col-3-3 {
+        margin-right: 0;
+        padding-right: 80px;
+        padding-left: unset;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .tp-about-3-shape {
+        margin-left: unset;
+    }
+
+    .tp-about-3-content {
+        padding-right: 0;
+        padding-left: unset;
+    }
+}

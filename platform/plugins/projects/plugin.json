@@ -1,0 +1,11 @@
+{
+    "id": "vendor/projects",
+    "name": "Projects",
+    "namespace": "Botble\\Projects\\",
+    "provider": "Botble\\Projects\\Providers\\ProjectsServiceProvider",
+    "author": "abdulhamid",
+    "url": "",
+    "version": "1.0.0",
+    "description": "",
+    "minimum_core_version": "7.3.8"
+}

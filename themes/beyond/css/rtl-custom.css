@@ -1,0 +1,16 @@
+.blog_meta li {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.tp-blog-title-sm {
+    font-size: 22px;
+    line-height: 1.5em;
+}
+
+
+.tp-blog-list-thumb {
+    margin-left: 80px;
+    margin-right: 0px;
+}
