@@ -37,6 +37,9 @@ return [
 
             $theme->asset()->container('footer')->usePath()->add('jquery', 'js/vendor/jquery.js');
             $theme->asset()->container('footer')->usePath()->add('bootstrap-jquery', 'js/bootstrap-bundle.js');
+//            $theme->asset()->container('footer')->usePath()
+//                ->add('custom', 'js/custom.min.js', ['jquery'], [], $version);
+
 
             $theme->asset()->container('footer')->usePath()->add('gsap', 'js/gsap.js', ['jquery'], [], $version);
             $theme->asset()->container('footer')->usePath()->add('scroll-to-plugin', 'js/gsap-scroll-to-plugin.js', ['jquery'], [], $version);
@@ -61,12 +64,20 @@ return [
             $theme->asset()->container('footer')->usePath()->add('tp-cursor', 'js/tp-cursor.js', ['jquery'], [], $version);
             $theme->asset()->container('footer')->usePath()->add('custom.js', 'js/custom.js', ['jquery'], [], $version);
 
+
+
             if (BaseHelper::isRtlEnabled()) {
                 $theme->asset()->usePath()->add('bootstrap-css', 'plugins/bootstrap/css/bootstrap.rtl.min.css');
+
+                $theme->asset()->usePath()->add('rtl-style', 'css/rtl.css', [], [], $version);
+                $theme->asset()->usePath()->add('rtl-style', 'css/ar-style.css', [], [], $version);
+                $theme->asset()->usePath()->add('rtl-custom', 'css/rtl-custom.css', [], [], $version);
+
             } else {
                 $theme->asset()->usePath()->add('bootstrap-css', 'css/bootstrap.css');
             }
 
+//            $theme->asset()->usePath()->add('fontawesome', 'plugins/fontawesome5/css/fontawesome.min.css');
             $theme->asset()->usePath()->add('animate', 'css/animate.css', [], [], $version);
             $theme->asset()->usePath()->add('swiper-bundle', 'css/swiper-bundle.css', [], [], $version);
             $theme->asset()->usePath()->add('magnific', 'css/magnific-popup.css', [], [], $version);
@@ -76,13 +87,6 @@ return [
             $theme->asset()->usePath()->add('custom-animation', 'css/custom-animation.css', [], [], $version);
             $theme->asset()->usePath()->add('main', 'css/main.css', [], [], $version);
             $theme->asset()->usePath()->add('custom', 'css/custom.css', [], [], rand(1,99));
-
-            if (BaseHelper::isRtlEnabled()) {
-                $theme->asset()->usePath()->add('rtl-style', 'css/rtl.css', [], [], $version);
-                $theme->asset()->usePath()->add('rtl-style', 'css/ar-style.css', [], [], $version);
-                $theme->asset()->usePath()->add('rtl-custom', 'css/rtl-custom.css', [], [], $version);
-
-            }
 
             if (function_exists('shortcode')) {
                 $theme->composer(['page', 'post'], function (View $view) {
