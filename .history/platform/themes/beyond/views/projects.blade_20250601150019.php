@@ -66,7 +66,7 @@
        <div class="sv-small-text-box d-flex justify-content-between">
        </div>
        <div class="sv-big-text-box">
-          <h4 class="sv-big-text tp-char-animation"><a href="/contact">{{ __("Get in Touch")}}</a></h4>
+          <h4 class="sv-big-text tp-char-animation"><a href="/contact">Get in Touch</a></h4>
        </div>
     </div>
  </div>

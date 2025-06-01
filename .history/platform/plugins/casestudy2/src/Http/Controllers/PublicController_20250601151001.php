@@ -1,12 +1,17 @@
 <?php
 
-namespace Botble\CaseStady\Http\Controllers;
+namespace Botble\Casestudy2\Http\Controllers;
 
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\CaseStady\Models\CaseStudy;
+use Botble\Casestudy2\Models\Casestudy2;
+use Botble\Projects\Http\Requests\ProjectsRequest;
+use Botble\Projects\Models\Projects;
 use Botble\Base\Facades\PageTitle;
 use Botble\Base\Http\Controllers\BaseController;
+use Botble\Projects\Tables\ProjectsTable;
+use Botble\Projects\Forms\ProjectsForm;
 use SeoHelper;
 use Botble\SeoHelper\SeoOpenGraph;
 use RvMedia;
@@ -28,11 +33,11 @@ class PublicController extends BaseController
         \App::setLocale($lang);
 
         // Attempt to retrieve by ID first
-        $project = CaseStudy::find(1);
+        $project = Casestudy2::find(1);
 
         // If not found by ID, attempt to retrieve by slug
         if (!$project) {
-            $project = CaseStudy::where('slug', $slug)->first();
+            $project = Casestudy2::where('slug', $slug)->first();
         }
 
         // If the project is still not found, handle the case (e.g., return a 404 response)
@@ -73,4 +78,49 @@ class PublicController extends BaseController
         return Theme::scope('case-study', ['project' => $project], 'case-study')
             ->render();
     }
+
+    public function GetProjects($lang = 'en', $slug = '')
+    {
+        dd($lang);
+
+        if ($slug === ''){
+            $slug = $lang;
+            $lang = 'en';
+        }
+
+        \App::setLocale($lang);
+
+        // Attempt to retrieve by ID first
+        $projects = Projects::get();
+
+        // \App::setLocale($lang);
+
+        // SeoHelper::setTitle($project->title)
+        //     ->setDescription(substr($project->summary, 0, 155));
+
+        // $meta = new SeoOpenGraph;
+        // if ($project->picture) {
+        //     $meta->setImage(RvMedia::getImageUrl($project->picture, 'medium'));
+        // }
+        // $meta->setDescription(substr($project->summary, 0, 155));
+        // $meta->setUrl('https://holistiquetraining.com/en/project/' . $project->slug);
+        // $meta->setTitle($project->title);
+        // $meta->setType('Course');
+
+        // // canonical
+        // $seometa = new SeoMeta;
+        // $canonical = new MiscTags;
+        // $canonical->setUrl('https://holistiquetraining.com/en/course/' . $project->slug);
+        // $seometa->misc($canonical);
+        // $seometa->setTitle($project->title);
+        // $seometa->setDescription(substr($project->summary, 0, 155));
+        // SeoHelper::setSeoMeta($seometa);
+
+        // SeoHelper::setSeoOpenGraph($meta);
+
+
+        return Theme::scope('projects', ['projects' => $projects])
+            ->render();
+    }
+
 }

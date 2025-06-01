@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="tm-hero-content">
-                    <span class="tm-hero-subtitle">{{ __("Beyond Creative")}}</span>
-                    <h4 class="tm-hero-title-big">{{ __("Contact Us")}}</h4>
+                    <span class="tm-hero-subtitle">Beyond Creative</span>
+                    <h4 class="tm-hero-title-big">Contact Us</h4>
                 </div>
             </div>
         </div>
@@ -26,9 +26,25 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="cn-contactform-wrap">
-                        <h4 class="cn-contactform-2-title">{{ __("Send a Message")}}</h4>
+                        <h4 class="cn-contactform-2-title">Send a Message</h4>
                         {{do_shortcode('[contact-form][/contact-form]')}}
-                        
+                        {{--<form action="#">--}}
+                            {{--<div class="cn-contactform-input mb-25">--}}
+                                {{--<label>Name</label>--}}
+                                {{--<input type="text" placeholder="John Doe">--}}
+                            {{--</div>--}}
+                            {{--<div class="cn-contactform-input mb-25">--}}
+                                {{--<label>Subject</label>--}}
+                                {{--<input type="text" placeholder="Your@email.com">--}}
+                            {{--</div>--}}
+                            {{--<div class="cn-contactform-input mb-25">--}}
+                                {{--<label>Message</label>--}}
+                                {{--<textarea placeholder="Tell Us About Your Project"></textarea>--}}
+                            {{--</div>--}}
+                            {{--<div class="cn-contactform-btn">--}}
+                                {{--<button class="tp-btn-black-md white-bg w-100" type="submit">Send Message</button>--}}
+                            {{--</div>--}}
+                        {{--</form>--}}
                     </div>
                 </div>
             </div>

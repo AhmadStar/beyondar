@@ -13,7 +13,9 @@
              </div>
              <div class="tm-hero-text tp_title_anim">
                 <p>
-                   {{ __("We’re a diverse team that works as fancies attention to details, enjoys beers on Friday nights and aspires to design the dent in the universe.")}}
+                   We’re a diverse team that works as fancies attention to
+                   details, enjoys beers on Friday nights and aspires to design
+                   the dent in the universe.
                 </p>
              </div>
           </div>
@@ -28,11 +30,11 @@
        <div class="row justify-content-center">
           <div class="col-xl-8">
              <div class="portfolio-filter masonary-menu d-flex justify-content-center mb-60">
-                <button data-filter="*" class="active"><span>{{ __("SHOW ALL")}}</span></button>
-                <button data-filter=".Marketing"><span>{{ __("Marketing")}}</span></button>
-                <button data-filter=".Design"><span>{{ __("Design")}}</span></button>
-                <button data-filter=".Video"><span>{{ __("Video")}}</span></button>
-                <button data-filter=".Planning"><span>{{ __("Planning")}}</span></button>
+                <button data-filter="*" class="active"><span>SHOW ALL</span></button>
+                <button data-filter=".Marketing"><span>Marketing</span></button>
+                <button data-filter=".Design"><span>Design</span></button>
+                <button data-filter=".Video"><span>Video</span></button>
+                <button data-filter=".Planning"><span>Planning</span></button>
              </div>
           </div>
        </div>
@@ -66,7 +68,7 @@
        <div class="sv-small-text-box d-flex justify-content-between">
        </div>
        <div class="sv-big-text-box">
-          <h4 class="sv-big-text tp-char-animation"><a href="/contact">{{ __("Get in Touch")}}</a></h4>
+          <h4 class="sv-big-text tp-char-animation"><a href="/contact">Get in Touch</a></h4>
        </div>
     </div>
  </div>

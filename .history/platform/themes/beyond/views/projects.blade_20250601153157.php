@@ -1,5 +1,6 @@
 @php
     $lang = app()->getLocale();
+    dd($lang);
 @endphp
 
 <!-- hero area start -->

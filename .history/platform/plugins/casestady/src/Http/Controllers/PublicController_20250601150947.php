@@ -5,8 +5,12 @@ namespace Botble\CaseStady\Http\Controllers;
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\CaseStady\Models\CaseStudy;
+use Botble\Projects\Http\Requests\ProjectsRequest;
+use Botble\Projects\Models\Projects;
 use Botble\Base\Facades\PageTitle;
 use Botble\Base\Http\Controllers\BaseController;
+use Botble\Projects\Tables\ProjectsTable;
+use Botble\Projects\Forms\ProjectsForm;
 use SeoHelper;
 use Botble\SeoHelper\SeoOpenGraph;
 use RvMedia;
@@ -73,4 +77,24 @@ class PublicController extends BaseController
         return Theme::scope('case-study', ['project' => $project], 'case-study')
             ->render();
     }
+
+    public function GetProjects($lang = 'en', $slug = '')
+    {
+        dd($lang);
+
+        if ($slug === ''){
+            $slug = $lang;
+            $lang = 'en';
+        }
+
+        \App::setLocale($lang);
+
+        // Attempt to retrieve by ID first
+        $projects = Projects::get();
+
+
+        return Theme::scope('projects', ['projects' => $projects])
+            ->render();
+    }
+
 }

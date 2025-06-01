@@ -1,3 +1,4 @@
+<!-- contact area start -->
 <div class="cn-contact-info-area">
     <div class="container container-1840">
         <div class="cn-contact-info-bg black-bg">
@@ -25,10 +26,12 @@
                                             <a href="mailto:{{($shortcode->{'phone'.$i})}}">{{($shortcode->{'email'.$i})}}</a>
                                         </div>
                                     </div>
+
                                     <div class="cn-contact-map">
                                         <a href="#">{{ __("Google Maps")}}</a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -37,6 +40,7 @@
         </div>
     </div>
 </div>
+<!-- contact area end -->
 
 
 

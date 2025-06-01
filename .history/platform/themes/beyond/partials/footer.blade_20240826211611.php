@@ -9,7 +9,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 mb-60">
                     <div class="tp-footer-3-widget-wrapper footer-col-3-1">
                         <div class="tp-footer-3-widget mb-40">
-                            <h4 class="tp-footer-3-title">{{ __("Website map")}}</h4>
+                            <h4 class="tp-footer-3-title">Website map</h4>
                             <div class="tp-footer-3-menu">
                                 {!!
                            Menu::renderMenuLocation('footer-menu', [
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="tp-footer-3-widget">
-                            <h4 class="tp-footer-3-title">{{ __("Newsletter")}}</h4>
+                            <h4 class="tp-footer-3-title">Newsletter</h4>
                             <div class="tp-footer-3-input-box d-flex align-items-center">
                                 <input type="text" placeholder="Enter Address...">
                                 <button class="tp-footer-3-btn p-relative">
@@ -67,7 +67,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 mb-60">
                     <div class="tp-footer-3-widget-wrapper footer-col-3-3">
                         <div class="tp-footer-3-widget mb-30">
-                            <h4 class="tp-footer-3-title">{{ __("Contact")}}</h4>
+                            <h4 class="tp-footer-3-title">Contact</h4>
                             <div class="tp-footer-2-contact-item">
                                  <span><a href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
                                           target="_blank">{{theme_option('address')}}</a></span>
@@ -78,10 +78,12 @@
                             </div>
                         </div>
                         <div class="tp-footer-3-widget">
-                            <h4 class="tp-footer-3-title">{{ __("Follow")}}</h4>
+                            <h4 class="tp-footer-3-title">Follow</h4>
                             <div class="tp-footer-3-social">
                                 @if ($socialLinks = Theme::getSocialLinks())
                                     @foreach($socialLinks as $socialLink)
+                                        {{--{!! dd($socialLink) !!}--}}
+                                        {{--@continue(! $icon = $socialLink->getIconHtml())--}}
                                         <a {{ $socialLink->getAttributes() }}><i class="fa-brands fa-{{$socialLink->getName()}}"></i></a>
                                     @endforeach
                                 @endif
@@ -101,7 +103,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-4 col-lg-5">
                     <div class="tp-copyright-2-left text-center text-lg-start">
-                        <p>{{ __("All rights reserved — 2025 © Beyond Creative")}}</p>
+                        <p>All rights reserved — 2024 © Beyond Creative</p>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-7">

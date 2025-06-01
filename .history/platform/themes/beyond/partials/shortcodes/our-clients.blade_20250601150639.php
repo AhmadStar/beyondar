@@ -25,7 +25,7 @@
         <div class="row gx-80 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
             @foreach($clients as $client)
             @php
-                // dd($client);   
+                dd($client);   
             @endphp
             <div class="col">
                 <div class="bd-brand-item mb-80">

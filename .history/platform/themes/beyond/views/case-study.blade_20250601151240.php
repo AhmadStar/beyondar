@@ -4,6 +4,7 @@
     data-background="{{ RvMedia::getImageUrl($project->image) }}">
     <div class="showcase-details-2-link">
         <a class="project-details-custom-link" href=" {{ $project->website }}">
+            {{-- Visit Website --}}
             <span>
                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.27344 9.5L9.27344 1.5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
@@ -50,7 +51,7 @@
         <div class="row">
             <div class="col-xl-8">
                 <div class="showcase-details-2-section-box">
-                    <h4 class="showcase-details-2-section-title tp-char-animation">{{ __("Case Study") }}</h4>
+                    <h4 class="showcase-details-2-section-title tp-char-animation">Case Study</h4>
                 </div>
             </div>
         </div>

@@ -1,12 +1,15 @@
 <?php
 
-namespace Botble\CaseStady\Http\Controllers;
+namespace Botble\Projects\Http\Controllers;
 
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Http\Actions\DeleteResourceAction;
-use Botble\CaseStady\Models\CaseStudy;
+use Botble\Projects\Http\Requests\ProjectsRequest;
+use Botble\Projects\Models\Projects;
 use Botble\Base\Facades\PageTitle;
 use Botble\Base\Http\Controllers\BaseController;
+use Botble\Projects\Tables\ProjectsTable;
+use Botble\Projects\Forms\ProjectsForm;
 use SeoHelper;
 use Botble\SeoHelper\SeoOpenGraph;
 use RvMedia;
@@ -18,7 +21,7 @@ use Botble\Theme\Facades\Theme;
 class PublicController extends BaseController
 {
 
-    public function GetCaseStudy($lang = 'en', $slug = '')
+    public function GetProject($lang = 'en', $slug = '')
     {
         if ($slug === ''){
             $slug = $lang;
@@ -28,11 +31,11 @@ class PublicController extends BaseController
         \App::setLocale($lang);
 
         // Attempt to retrieve by ID first
-        $project = CaseStudy::find(1);
+        $project = Projects::find(1);
 
         // If not found by ID, attempt to retrieve by slug
         if (!$project) {
-            $project = CaseStudy::where('slug', $slug)->first();
+            $project = Projects::where('slug', $slug)->first();
         }
 
         // If the project is still not found, handle the case (e.g., return a 404 response)
@@ -70,7 +73,25 @@ class PublicController extends BaseController
         SeoHelper::setSeoOpenGraph($meta);
 
 
-        return Theme::scope('case-study', ['project' => $project], 'case-study')
+        return Theme::scope('project', ['project' => $project], 'default_view')
             ->render();
     }
+
+    public function GetProjects($lang = 'en', $slug = '')
+    {
+        if ($slug === ''){
+            $slug = $lang;
+            $lang = 'en';
+        }
+
+        \App::setLocale($lang);
+
+        // Attempt to retrieve by ID first
+        $projects = Projects::get();
+        dd($projects);
+        
+        return Theme::scope('projects', ['projects' => $projects])
+            ->render();
+    }
+
 }

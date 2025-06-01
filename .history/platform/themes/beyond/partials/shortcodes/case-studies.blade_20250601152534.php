@@ -16,7 +16,7 @@
                                         <div class="tp-image"
                                             data-background="{{ RvMedia::getImageUrl($casestudy->image) }}">
                                             <div class="tp-slider-content">
-                                                <span class="tp-portfolio-9-category tp_reveal_anim">{{ __("Case Studies")}}</span>
+                                                <span class="tp-portfolio-9-category tp_reveal_anim">Case Studies</span>
                                                 <h1 class="tp-portfolio-9-title tp_reveal_anim not-hide-cursor"
                                                     data-cursor="View<br>Demo">
                                                     <a class="cursor-hide"

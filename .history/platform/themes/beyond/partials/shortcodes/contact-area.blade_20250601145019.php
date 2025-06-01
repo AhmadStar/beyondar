@@ -1,3 +1,4 @@
+<!-- contact area start -->
 <div class="cn-contact-info-area">
     <div class="container container-1840">
         <div class="cn-contact-info-bg black-bg">
@@ -37,6 +38,7 @@
         </div>
     </div>
 </div>
+<!-- contact area end -->
 
 
 
