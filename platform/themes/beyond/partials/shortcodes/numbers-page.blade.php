@@ -20,7 +20,7 @@
                                         d="M5.5102 6.48981C5.5102 9.533 3.04318 12 0 12C0 8.95681 2.46703 6.48981 5.5102 6.48981Z"
                                         fill="currentcolor"/>
                               </svg>
-                             Some Numbers
+                             {{( __("Some Numbers"))}}
                            </span>
                     <h4 class="ab-inner-funfact-title ">{{$shortcode->title}}</h4>
                 </div>

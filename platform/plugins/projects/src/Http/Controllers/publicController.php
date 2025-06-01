@@ -4,11 +4,6 @@ namespace Botble\Projects\Http\Controllers;
 
 use Botble\Projects\Models\Projects;
 use Botble\Base\Http\Controllers\BaseController;
-use SeoHelper;
-use Botble\SeoHelper\SeoOpenGraph;
-use RvMedia;
-use Botble\SeoHelper\SeoMeta;
-use Botble\SeoHelper\Entities\MiscTags;
 use Botble\Theme\Facades\Theme;
 
 class PublicController extends BaseController
@@ -20,8 +15,6 @@ class PublicController extends BaseController
             $slug = $lang;
             $lang = 'en';
         }
-
-        dd($lang);
 
         \App::setLocale($lang);
 
@@ -39,41 +32,12 @@ class PublicController extends BaseController
 
         \App::setLocale($lang);
 
-        SeoHelper::setTitle($project->title)
-            ->setDescription(substr($project->summary, 0, 155));
-
-        $meta = new SeoOpenGraph;
-        if ($project->picture) {
-            $meta->setImage(RvMedia::getImageUrl($project->picture, 'medium'));
-        }
-        $meta->setDescription(substr($project->summary, 0, 155));
-        $meta->setUrl('https://holistiquetraining.com/en/project/' . $project->slug);
-        $meta->setTitle($project->title);
-        $meta->setType('Course');
-
-        // canonical
-        $seometa = new SeoMeta;
-        $canonical = new MiscTags;
-        $canonical->setUrl('https://holistiquetraining.com/en/course/' . $project->slug);
-        $seometa->misc($canonical);
-        $seometa->setTitle($project->title);
-        $seometa->setDescription(substr($project->summary, 0, 155));
-        SeoHelper::setSeoMeta($seometa);
-
-        SeoHelper::setSeoOpenGraph($meta);
-
-
         return Theme::scope('project', ['project' => $project], 'default_view')
             ->render();
     }
 
-    public function GetProjects($lang = 'en', $slug = '')
+    public function GetProjects($lang = 'en')
     {
-        if ($slug === ''){
-            $slug = $lang;
-            $lang = 'en';
-        }
-
         \App::setLocale($lang);
 
         $projects = Projects::get();
@@ -81,5 +45,4 @@ class PublicController extends BaseController
         return Theme::scope('projects', ['projects' => $projects])
             ->render();
     }
-
 }

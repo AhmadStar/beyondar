@@ -1,3 +1,6 @@
+@php
+    $lang = app()->getLocale();
+@endphp
 
 <!-- project area start -->
 <div class="tp-project-3-area pt-130 black-bg">
@@ -12,7 +15,7 @@
                     <div class="tp-project-3-btn-box">
                         <a class="tp-btn-zikzak p-relative" href="{{ $shortcode->url}}">
                                  <span class="zikzak-content">
-                                    See <br> {{__('All Services')}}
+                                    {{ __("See")}} <br> {{__('All Services')}}
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path

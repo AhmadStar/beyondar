@@ -63,6 +63,7 @@ return [
 
             if (BaseHelper::isRtlEnabled()) {
                 $theme->asset()->usePath()->add('bootstrap-css', 'plugins/bootstrap/css/bootstrap.rtl.min.css');
+                $theme->asset()->usePath()->add('ar-css', 'css/ar.css');
             } else {
                 $theme->asset()->usePath()->add('bootstrap-css', 'css/bootstrap.css');
             }

@@ -9,12 +9,18 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    @php(Theme::set('headerMeta', Theme::partial('header-meta')))
+    @php
+        (Theme::set('headerMeta', Theme::partial('header-meta')))
+    @endphp
 
     {!! Theme::header() !!}
 </head>
 
-<body id="body" class="tp-smooth-scroll  @if (Request::is('/')) home @else inner-page @endif">
+@php
+    $lang = app()->getLocale();
+@endphp
+
+<body id="body" class="tp-smooth-scroll  @if (Request::is('/')) home @else inner-page @endif" @if($lang === 'ar') dir='rtl' @else dir='ltr' @endif>
     {{-- {!! apply_filters(THEME_FRONT_BODY, null) !!} --}}
     <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade

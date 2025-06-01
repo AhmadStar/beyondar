@@ -1,11 +1,14 @@
-<!-- service-details-area-start -->
+@php
+    $lang = app()->getLocale();
+@endphp
+
 <div class="service-details__area service-details__space pt-200 pb-120">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="service-details__title-box mb-40">
-                    <span class="service-details__subtitle tp-char-animation">{{ __("Service")}}</span>
-                    <h4 class="sv-hero-title  tp-char-animation">{{$service->name}}</h4>
+                    <span class="service-details__subtitle ">{{ __("Service")}}</span>
+                    <h4 class="">{{$service->name}}</h4>
                 </div>
             </div>
             <div class="row">
@@ -47,16 +50,16 @@
             <div class="col-xl-5 col-lg-5">
                 <div class="service-details__right-wrap fix p-relative">
                     <div class="service-details__rotate-text">
-                        <span>Full list of services</span>
+                        <span>{{ __("Full list of services")}}</span>
                     </div>
                     <div class="service-details__right-category">
                         @foreach($services as $item)
-                            <a href="/service/{{$service->slug}}">{{$item->name}}</a>
+                            <a href="/{{$lang}}/service/{{$service->slug}}">{{$item->name}}</a>
                         @endforeach
 
                     </div>
                     <div class="service-details__right-text-box">
-                        <h4>Service Details <br></h4>
+                        <h4>{{ __("Service Details")}} <br></h4>
                         {!! $service->list !!}
                         <a class="tp-btn-white background-black" href="/contact">{{__('Contact Us')}}</a>
                     </div>
@@ -65,9 +68,7 @@
         </div>
     </div>
 </div>
-<!-- service-details-area-end -->
 
-<!-- port area start -->
 <div class="tp-line-text-wrap tp-line-text-wrap-2 pb-120">
     <div class="swiper tp-img-slide">
         <div class="swiper-wrapper">
@@ -104,4 +105,3 @@
         </div>
     </div>
 </div>
-<!-- port area end -->
