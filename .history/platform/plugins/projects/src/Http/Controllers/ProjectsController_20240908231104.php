@@ -68,6 +68,8 @@ class ProjectsController extends BaseController
 
     public function update(Projects $projects, ProjectsRequest $request)
     {
+
+       
         $projects->fill($request->input());
 
         $projects->save();

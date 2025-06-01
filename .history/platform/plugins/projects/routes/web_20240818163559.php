@@ -17,16 +17,15 @@ Route::group(['namespace' => 'Botble\Projects\Http\Controllers'], function () {
         ]);
     })->where('language', 'en|ar');
 
-    Route::get('projects/{slug}', [
-        'as'         => 'projects-view',
-        'uses'       => 'PublicController@GetProject',
-    ]);
-
     Route::get('projects', [
         'as'         => 'projects-view',
         'uses'       => 'PublicController@GetProjects',
     ]);
 
+    Route::get('projects/{slug}', [
+        'as'         => 'projects-view',
+        'uses'       => 'PublicController@GetProject',
+    ]);
     Route::group(['prefix' => '{language}'], function () {
         Route::get('projects', [
             'as'         => 'projects-view',

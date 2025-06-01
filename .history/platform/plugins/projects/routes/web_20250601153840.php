@@ -22,17 +22,17 @@ Route::group(['namespace' => 'Botble\Projects\Http\Controllers'], function () {
         'uses'       => 'PublicController@GetProject',
     ]);
 
-    Route::get('projects', [
-        'as'         => 'projects-view',
-        'uses'       => 'PublicController@GetProjects',
-    ]);
+    // Route::get('projects', [
+    //     'as'         => 'projects-view',
+    //     'uses'       => 'PublicController@GetProjects',
+    // ]);
 
-    Route::group(['prefix' => '{language}'], function () {
-        Route::get('projects', [
-            'as'         => 'projects-view',
-            'uses'       => 'PublicController@GetProjects',
-        ]);
-    })->where('language', 'en|ar');
+    // Route::group(['prefix' => '{language}'], function () {
+    //     Route::get('projects', [
+    //         'as'         => 'projects-view',
+    //         'uses'       => 'PublicController@GetProjects',
+    //     ]);
+    // })->where('language', 'en|ar');
 
 
 });
