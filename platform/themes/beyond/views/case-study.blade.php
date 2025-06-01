@@ -1,4 +1,6 @@
-<!-- project details area start -->
+@php
+    $lang = app()->getLocale();
+@endphp
 
 <div class="showcase-details-2-area showcase-details-2-bg p-relative"
     data-background="{{ RvMedia::getImageUrl($project->image) }}">

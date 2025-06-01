@@ -1,3 +1,7 @@
+@php
+    $lang = app()->getLocale();
+@endphp
+
 <!-- hero area start -->
 <div class="sv-hero-area sv-hero-ptb">
     <div class="container container-1530">
@@ -68,7 +72,7 @@
                         </div>
                         <div class="tp-service-4-content">
                             <h4 class="tp-service-4-title-sm tp-text-black"><a
-                                        href="service-details.html"> {!! $shortcode->ls1 !!}</a></h4>
+                                        href="#"> {!! $shortcode->ls1 !!}</a></h4>
                             <p> {!! $shortcode->s1 !!}</p>
                         </div>
                     </div>
@@ -80,7 +84,7 @@
                         </div>
                         <div class="tp-service-4-content">
                             <h4 class="tp-service-4-title-sm tp-text-black"><a
-                                        href="service-details.html"> {!! $shortcode->ls2 !!}</a></h4>
+                                        href="#"> {!! $shortcode->ls2 !!}</a></h4>
                             <p> {!! $shortcode->s2 !!}</p>
                         </div>
                     </div>
@@ -91,7 +95,7 @@
                             <img width="100px" src="{{ RvMedia::getImageUrl($shortcode->icon3) }}" alt="">                        </div>
                         <div class="tp-service-4-content">
                             <h4 class="tp-service-4-title-sm tp-text-black"><a
-                                        href=""> {!! $shortcode->ls3 !!}</a></h4>
+                                        href="#"> {!! $shortcode->ls3 !!}</a></h4>
                             <p> {!! $shortcode->s2 !!}</p>
                         </div>
                     </div>
@@ -119,7 +123,6 @@
                         <div class="sv-service-content-wrap d-flex align-items-center">
                             <div class="sv-service-content">
                                 <div class="sv-service-title-box">
-                                    {{--<span class="sv-service-subtitle"><i>01</i>{{__('Service')}}</span>--}}
                                     <h4 class="sv-service-title">{{$service->name}}</h4>
                                 </div>
                                 <div class="sv-service-space-wrap">
@@ -167,23 +170,9 @@
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="tp-brand-4-item p-relative">
                         <img src="{{ RvMedia::getImageUrl($client->logo) }}" alt="">
-                        {{--<div class="tp-brand-4-line-text d-flex align-items-center">--}}
-                            {{--<span>TopoChico.com</span>--}}
-                            {{--<span>TopoChico.com</span>--}}
-                            {{--<span>TopoChico.com</span>--}}
-                            {{--<span>TopoChico.com</span>--}}
-                            {{--<span>TopoChico.com</span>--}}
-                            {{--<span>TopoChico.com</span>--}}
-                        {{--</div>--}}
                     </div>
                 </div>
-
-
-
             @endforeach
-
-
-
         </div>
     </div>
 </div>
@@ -232,11 +221,9 @@
 <div class="sv-big-text-area pb-80">
     <div class="container container-1530">
         <div class="sv-small-text-box d-flex justify-content-between">
-            {{--<span>DIGITAL DESIGN EXPERIENCE</span>--}}
-            {{--<span>CREATIVE STUDIO</span>--}}
         </div>
         <div class="sv-big-text-box">
-            <h4 class="sv-big-text tp-char-animation"><a href="/contact">Get in Touch</a></h4>
+            <h4 class="sv-big-text tp-char-animation"><a href="/contact">{{ __("Get in Touch") }}</a></h4>
         </div>
     </div>
 </div>

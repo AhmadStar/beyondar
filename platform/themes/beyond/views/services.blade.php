@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="service-details__title-box mb-40">
-                    <span class="service-details__subtitle tp-char-animation">Service</span>
+                    <span class="service-details__subtitle tp-char-animation">{{ __("Service")}}</span>
                     <h4 class="sv-hero-title  tp-char-animation">{{$service->name}}</h4>
                 </div>
             </div>
@@ -42,15 +42,6 @@
                     <div class="service-details__left-text pb-20">
                         {!! $service->content !!}
                     </div>
-                    {{--<div class="service-details__fea-list">--}}
-                    {{--<ul>--}}
-                    {{--<li>Graphic research and production</li>--}}
-                    {{--<li>Presentation of your logo on different media</li>--}}
-                    {{--<li>Advice on the graphic orientation of your logo or its redesign</li>--}}
-                    {{--<li>Delivery of your logo in professional formats</li>--}}
-                    {{--</ul>--}}
-                    {{--</div>--}}
-
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5">

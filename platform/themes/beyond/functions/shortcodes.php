@@ -365,10 +365,10 @@ app('events')->listen(RouteMatched::class, function () {
     add_shortcode('contact-page', __('Contact page'), __('Contact page'), function (ShortcodeCompiler $shortcode) {
         return Theme::partial('shortcodes.contact-page', compact('shortcode'));
     });
+    
     shortcode()->setAdminConfig('contact-page', function (array $attributes) {
         return Theme::partial('shortcodes.contact-page-admin-config', compact('attributes'));
     });
-
 
     add_shortcode('case-studies', __('Case Studies'), __('Case Studies'), function (ShortcodeCompiler $shortcode) {
         $casestudies = \Botble\Casestudy2\Models\Casestudy2::query()

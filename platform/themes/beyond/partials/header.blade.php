@@ -13,7 +13,6 @@
 
     {!! Theme::header() !!}
 </head>
-{{-- <body {!! Theme::bodyAttributes() !!}> --}}
 
 <body id="body" class="tp-smooth-scroll  @if (Request::is('/')) home @else inner-page @endif">
     {{-- {!! apply_filters(THEME_FRONT_BODY, null) !!} --}}
